@@ -14,7 +14,7 @@ class Flux extends Model
 	protected $primaryKey = 'num';
 
 	// Des attributs qui peuvent être assignés massivement.
-	protected $fillable = array('idf','fichier','repertoire','format','type');
+	protected $fillable = array('idf','fichier','repertoire','format','type','taille','fabricant_id');
 
 	// Ici nous mettons les champs que nous ne voulons pas retourner dans les requêtes.
 	protected $hidden = ['created_at','updated_at'];
