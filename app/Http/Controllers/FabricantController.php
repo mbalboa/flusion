@@ -24,7 +24,7 @@ class FabricantController extends Controller
      */
     public function create()
     {
-        //
+      //
     }
 
     /**
@@ -35,7 +35,13 @@ class FabricantController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $fab = new Fabricant;
+
+      $fab->equipe = $request->equipe;
+      $fab->gs = $request->gs;
+      $fab->mail = $request->mail;
+
+      $fab->save();
     }
 
     /**

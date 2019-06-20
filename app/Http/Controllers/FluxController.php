@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Flux;
 
 class FluxController extends Controller
 {
@@ -13,7 +14,7 @@ class FluxController extends Controller
      */
     public function index()
     {
-        //
+        return response()->json(['status'=>'ok','data'=>Flux::all()], 200);
     }
 
     /**
@@ -43,9 +44,15 @@ class FluxController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($num)
     {
-        //
+      $flux=Flux::find($num);
+
+      if (!$flux)
+        {
+            return response()->json(['errors'=>array(['code'=>404,'message'=>'Aucun flux avec ce numéro'])],404);
+        }
+            return response()->json(['status'=>'ok','data'=>$flux],200);
     }
 
     /**

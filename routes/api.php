@@ -13,6 +13,6 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::resource('fabricants','FabricantController',['except'=>['edit','create'] ]);
+Route::resource('fabricants','FabricantController',['except'=>['update','create'] ]);
 Route::resource('flux','FluxController',[ 'only'=>['index','show'] ]);
-Route::resource('fabricants.flux','FabricantFluxController',[ 'except'=>['show','edit','create'] ]);
+Route::resource('fabricants.flux','FabricantFluxController',[ 'except'=>['create','show','update'] ]);
