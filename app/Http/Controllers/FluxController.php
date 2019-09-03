@@ -38,11 +38,12 @@ class FluxController extends Controller
     {
       $flux = new Flux;
 
-      $flux->hostname = $request->hostname;
-      $flux->systeme_exploitation = $request->systeme_exploitation;
-      $flux->flavors = $request->flavors;
-      $flux->reseau = $request->reseau;
-      $flux->stockage = $request->stockage;
+      $flux->idf = $request->idf;
+      $flux->fichier = $request->fichier;
+      $flux->repertoire = $request->repertoire;
+      $flux->format = $request->format;
+      $flux->type = $request->type;
+      $flux->taille = $request->taille;
       $flux->fabricant_id = $request->fabricant_id;
       //$flux->fabricant_id = Fabricant::find($request->nom)->id;
 

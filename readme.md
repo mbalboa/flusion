@@ -34,3 +34,7 @@ Création des controllers.
 ## Version 1.6
 
 Améliorations des routes et des deux controllers.
+
+## Version 1.7
+
+Ajout des formulaires pour tester l'Api.
