@@ -13,6 +13,6 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::resource('fabricants','FabricantController',['only'=>['index','show', 'store'] ]);
+Route::resource('flux','FluxController',[ 'only'=>['index','show', 'store'] ]);
+//Route::resource('fabricants.flux','FabricantFluxController',[ 'except'=>['create','show','update'] ]);

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Flux Formulaire</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+<div class="container-fluid">
+	<a class="navbar-brand" href="#"><img src="img/logo.png"></a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse"
+	data-target="#navbarResponsive"
+	<span class="navbar-toggler-icon"</span>
+</button>
+<div class="collapse navbar-collapse" id="navbarResponsive">
+<ul class="navbar-nav ml-auto">
+    <li class="nav-item active">
+      <a class="nav-link" href="#">Creation Flux</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="Creation_Fabricant.html">Creation Fabricant</a>
+    </li>
+  </ul>
+</div>
+</div>
+</nav>
+
+
+<!---Informations-->
+
+<h1 class="title"><span>Demande de Flux</span></h1>
+<form class="text-center border border-light p-3" action="http://127.0.0.1:8000/api/flux" method="post" enctype='application/json' name="FlusionFormPost">
+
+	<hr class="light">
+		<h3 class="param">Paramètres généraux</h3>
+
+<!---Row1-->
+
+		<div class="form-row">
+
+<!---Param 1-->
+			  <div class="form-group col-md-4">
+		      <label>Idf</label>
+		      <input type="text" class="form-control" id="param1" name="idf">
+		    </div>
+
+<!---Param 2-->
+				<div class="form-group col-md-4">
+					<label>Fichier</label>
+					<input type="text" class="form-control" id="param2" name="fichier">
+				</div>
+
+<!---Param 3-->
+				<div class="form-group col-md-4">
+					<label>Repertoire</label>
+					<input type="text" class="form-control" id="param3" name="repertoire">
+				</div>
+
+	</div>
+
+			<div class="form-row">
+
+	<!---Param 4-->
+
+					<div class="form-group col-md-3">
+						<label for="inputState">Format</label>
+						<select id="inputState" class="form-control" id="param4" name="format">
+							<option>Variable</option>
+							<option>Fixe</option>
+						</select>
+					</div>
+
+<!---Param 5-->
+
+					<div class="form-group col-md-3">
+						<label for="inputState">Type</label>
+						<select id="inputState" class="form-control" id="param5" name="type">
+							<option>Texte</option>
+							<option>Binaire</option>
+						</select>
+					</div>
+
+<!---Param 6-->
+
+						<div class="form-group col-md-3">
+										<label>Taille</label>
+										<input type="text" class="form-control" id="param6" name="taille">
+									</div>
+
+<!---Param 7-->
+
+						<div class="form-group col-md-3">
+									<label>Fabricant id</label>
+									<input type="text" class="form-control" id="param7" name="fabricant_id">
+						</div>
+
+</div>
+
+
+<div class="col">
+	<div class="collapse" id="Collapse-demo-multipl-2">
+		<div class="card card-body">
+
+		</div>
+	</div>
+</div>
+
+<hr class="light">
+<button class="btn btn-outline-info" id="creation" type="submit">Créer Flux</button>
+</form>
+
+<form action="http://127.0.0.1:8000/api/flux" method="get" enctype='application/json' name="FlusionFormGet">
+<hr class="light">
+<div class="form-row">
+
+	<div class="form-group col-md-4">
+	</div>
+<div class="form-group col-md-4">
+   <button class="btn btn-outline-info" id="recuperation" type="submit">Afficher Flux</button>
+	 </div>
+	 <div class="form-group col-md-4">
+ 	</div>
+		</div>
+</form>
+
+
+<hr class="light">
+
+
+<!--- Footer -->
+
+<footer>
+<div class="container-fluid padding">
+	<div class="row text-center">
+		<div class="col-md-4">
+			<img src="img/logo.png">
+			<hr class="light">
+			<p>test</p>
+			<p>test</p>
+			<p>test</p>
+			<p>Marc Balboa</p>
+		</div>
+		<div class="col-md-4">
+			<hr class="light">
+			<h5>Contact</h5>
+			<hr class="light">
+			<p>marc.balboa@groupama.com</p>
+			<p>test</p>
+		</div>
+		<div class="col-md-4">
+			<hr class="light">
+			<h5>EXEMPLE</h5>
+			<hr class="light">
+			<p>Exemple</p>
+			<p>Exemple</p>
+		</div>
+	</div>
+</div>
+<div class="col-12">
+	<hr class="light-100">
+	<h5 class="center">&copy; Equipe Industrialisation & Flux</h5>
+</div>
+
+
+</footer>
+
+
+
+
+</body>
+</html>
