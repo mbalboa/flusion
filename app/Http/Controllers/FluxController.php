@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Flux;
+use App\Fabricant;
 
 class FluxController extends Controller
 {
@@ -35,7 +36,18 @@ class FluxController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $flux = new Flux;
+
+      $flux->hostname = $request->hostname;
+      $flux->systeme_exploitation = $request->systeme_exploitation;
+      $flux->flavors = $request->flavors;
+      $flux->reseau = $request->reseau;
+      $flux->stockage = $request->stockage;
+      $flux->fabricant_id = $request->fabricant_id;
+      //$flux->fabricant_id = Fabricant::find($request->nom)->id;
+
+      $flux->save();
+
     }
 
     /**
