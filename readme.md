@@ -38,3 +38,7 @@ Améliorations des routes et des deux controllers.
 ## Version 1.7
 
 Ajout des formulaires pour tester l'Api.
+
+## Version 1.7.2
+
+Changement distribution des fichiers, modèle vue et controller.
